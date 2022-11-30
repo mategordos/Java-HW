@@ -1,0 +1,123 @@
+-------------------------------------------------------------------------------
+Test set: com.training.epam.ticketservice.at.TestExecutor
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 3.357 sec <<< FAILURE!
+the admin account exists by default and can be logged in with the correct password(allow creating accounts and logging in)  Time elapsed: 0.414 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
+
+the admin account can be signed out(allow creating accounts and logging in)  Time elapsed: 0.156 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
+
+the admin account can not be logged in with incorrect password(allow creating accounts and logging in)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
+
+an admin user can create and list movies(allows creating movie descriptions)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
+
+an admin user can update a movie(allows creating movie descriptions)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
+
+an admin user can delete a movie(allows creating movie descriptions)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
+
+an unauthenticated user can list movies(allows creating movie descriptions)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
+
+an admin user can create and list rooms(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
+
+an admin user can update a room(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
+
+an admin user can delete a room(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
+
+an unauthenticated user can list rooms(allow creating, reading, updating and deleting rooms where the screenings will happen)  Time elapsed: 0.154 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
+
+The admin user can create and query screenings(allows creating, deleting and listing screenings)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
+The admin can not create overlapping screenings in the same room(allows creating, deleting and listing screenings)  Time elapsed: 0.154 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
+The admin can create overlapping screenings in different rooms(allows creating, deleting and listing screenings)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
+The admin can not create screenings during a 10 minute long breaks after another screening in the same room(allows creating, deleting and listing screenings)  Time elapsed: 0.155 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
+The admin can create screenings even if there is a break after a screening in a different room(allows creating, deleting and listing screenings)  Time elapsed: 0.157 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
+The admin user can delete screenings(allows creating, deleting and listing screenings)  Time elapsed: 0.154 sec  <<< FAILURE!
+java.lang.AssertionError: The service is not running.
+	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
+	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
+	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.applicationStarted(GenericCliProcessStepDefs.java:27)
+	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
+
