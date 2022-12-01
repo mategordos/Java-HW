@@ -4,11 +4,8 @@ import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
 import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -20,16 +17,11 @@ public class MovieServiceImpl implements MovieService{
 
     @Override
     public List<MovieDto> getMovieList() {
-
         return movieRepository.findAll().stream()
                 .map(this::convertEntityToDto)
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public Optional<MovieDto> getMovieByName(String movieTitle) {
-        return convertEntityToDto(movieRepository.findMovieByMovieTitle(movieTitle));
-    }
 
     @Override
     public void createMovie(MovieDto movieDto) {
@@ -54,6 +46,7 @@ public class MovieServiceImpl implements MovieService{
 
     @Override
     public void deleteMovie(String movieTitle) {
+        movieRepository.deleteMovieByMovieTitle(movieTitle);
     }
 
     private MovieDto convertEntityToDto(Movie movie){
