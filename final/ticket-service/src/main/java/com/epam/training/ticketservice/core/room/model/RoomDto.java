@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Value
 @Builder
-public class Room {
+public class RoomDto {
     private final String roomName;
     private final int rowLength;
     private final int columnLength;

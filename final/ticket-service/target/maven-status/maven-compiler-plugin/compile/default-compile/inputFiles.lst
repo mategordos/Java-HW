@@ -8,12 +8,14 @@
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserService.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/UserCommand.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/repository/MovieRepository.java
+/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/repository/RoomRepository.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/model/UserDto.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java
+/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/model/RoomDto.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/configuration/PromptConfiguration.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/entity/User.java
+/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/entity/Room.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserServiceImpl.java
-/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/model/Room.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieServiceImpl.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/Application.java

@@ -1,14 +1,14 @@
 package com.epam.training.ticketservice.core.room;
 
-import com.epam.training.ticketservice.core.room.model.Room;
+import com.epam.training.ticketservice.core.room.model.RoomDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface RoomService {
-    List<Room> getRoomList();
+    List<RoomDto> getRoomList();
 
-    Optional<Room> getRoomByName(String roomName);
+    Optional<RoomDto> getRoomByName(String roomName);
 
-    void createRoom(Room room);
+    void createRoom(RoomDto roomDto);
 }

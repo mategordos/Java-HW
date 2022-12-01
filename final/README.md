@@ -161,7 +161,7 @@ filmnek. Minden sor egy-egy filmet ír le és a következőképpen épül fel.
 
 * A következő parancs lehetőséget biztosít vetítő termek létrehozására.
 ```
-create room <terem neve> <széksorok száma> <szék oszlopok száma>
+create roomDto <terem neve> <széksorok száma> <szék oszlopok száma>
 ```
 * A parancs adminisztrációs parancs, így csak bejelentkezett 
 adminisztrátor felhasználó számára elérhető.
@@ -171,7 +171,7 @@ adminisztrátor felhasználó számára elérhető.
 
 * A következő parancs lehetőséget biztosít már meglévő vetítő termek módosítására.
 ```
-update room <terem neve> <széksorok száma> <szék oszlopok száma>
+update roomDto <terem neve> <széksorok száma> <szék oszlopok száma>
 ```
 * A parancs adminisztrációs parancs, így csak bejelentkezett 
 adminisztrátor felhasználó számára elérhető.
@@ -181,7 +181,7 @@ adminisztrátor felhasználó számára elérhető.
 
 * A következő parancs lehetővé teszi egy már meglévő vetítő terem törlését.
 ```
-delete room <terem neve>
+delete roomDto <terem neve>
 ```
 * A parancs adminisztrációs parancs, így csak bejelentkezett 
 adminisztrátor felhasználó számára elérhető.
@@ -227,7 +227,7 @@ create screening "Spirited Away" Pedersoli "2021-03-14 16:00"
     * A vetítés időtartama bele esik egy másik, azonos teremben történő vetítés utáni 10 perces szünetbe (amely lehetőséget
     biztosít például a terem előkészítésére a következő vetítésre). A kimenet ebben az esetben:
     ```
-    This would start in the break period after another screening in this room
+    This would start in the break period after another screening in this roomDto
     ```
 * A parancs adminisztrációs parancs, így csak bejelentkezett 
 adminisztrátor felhasználó számára elérhető.
@@ -255,11 +255,11 @@ There are no screenings
 * Amennyiben már van mentett vetítés, akkor a kimenet minden vetítést tartalmaz.
 A kimenet egy-egy sora egy-egy vetítés adatait tartalmazza a következő formátumban:
 ```
-<A film címe> (<műfaj>, <vetítés ideje percben> minutes), screened in room <terem neve>, at <vetítés kezdetének dátuma és ideje, YYYY-MM-DD hh:mm formátumban>
+<A film címe> (<műfaj>, <vetítés ideje percben> minutes), screened in roomDto <terem neve>, at <vetítés kezdetének dátuma és ideje, YYYY-MM-DD hh:mm formátumban>
 ```
 Például:
 ```
-Sátántangó (drama, 450 minutes), screened in room Pedersoli, at 2021-03-15 11:00
+Sátántangó (drama, 450 minutes), screened in roomDto Pedersoli, at 2021-03-15 11:00
 ```
 
 ### Követelmények a hármas jegyhez
@@ -334,7 +334,7 @@ jegyet:
     ```
     Signed in with account '<felhasználónév>'
     Your previous bookings are
-    Seats <a vetítésre foglalt ülések listája, ", "-el elválasztva, egy-egy ülés "(<sor>,<oszlop>) formátumú> on <film címe> in room <terem neve> starting at <vetítés kezdetének ideje YYYY-MM-DD hh:mm formátumban> for <a foglalás ára> HUF
+    Seats <a vetítésre foglalt ülések listája, ", "-el elválasztva, egy-egy ülés "(<sor>,<oszlop>) formátumú> on <film címe> in roomDto <terem neve> starting at <vetítés kezdetének ideje YYYY-MM-DD hh:mm formátumban> for <a foglalás ára> HUF
     ```
     * Minden már meglévő foglaláshoz létezik egy, a foglalást leíró sor a fenti formátumban.
     * A foglalásra vonatkozó szabályokról (pl. az ár kiszámítása) bővebben olvashatsz a következő szekciókban.
@@ -342,7 +342,7 @@ jegyet:
     ```
     Signed in with account 'sanyi'
     Your previous bookings are
-    Seats (5,5), (5,6) on Sátántangó in room Pedersoli starting at 2021-03-15 10:45 for 3000 HUF
+    Seats (5,5), (5,6) on Sátántangó in roomDto Pedersoli starting at 2021-03-15 10:45 for 3000 HUF
     ```
 * A parancs kimenete más esetekben a kettes jegyhez szükséges követelmények között van leírva.
 
@@ -366,7 +366,7 @@ book Sátántangó Pedersoli "2021-03-15 10:45" "5,5 5,6"
     ahol az ülőhely a listában megadottak közül az első olyan, amely nem foglalható
     * A megjelölt ülőhelyek valamelyike nem létezik az adott teremben. Ekkor a parancs kimenete
     ```
-    Seat <ülőhely> does not exist in this room
+    Seat <ülőhely> does not exist in this roomDto
     ```
     ahol az ülőhely a listában megadottak közül az első olyan, amely nem foglalható a hiba miatt.
 * Amennyiben a foglalás sikeres, a parancs kimenete a következő
@@ -428,7 +428,7 @@ Miután megtörtént, a teremben történő összes vetítés ára tartalmazza a
     ahol a vetítés történik csatolva van egy 500 Ft-s árkomponens, akkor a fenti foglalás ára
     2 * (500 Ft + 1500 Ft), tehát 4000 Ft
 ```
-attach price component to room <árkomponens neve> <terem neve>
+attach price component to roomDto <árkomponens neve> <terem neve>
 ```
 * A parancs adminisztrációs parancs, így csak bejelentkezett 
 adminisztrátor felhasználó számára elérhető.

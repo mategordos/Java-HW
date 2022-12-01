@@ -12,6 +12,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Movie {
     @Id
+    @GeneratedValue
+    private long id;
+    @Column(unique = true)
     private String movieTitle;
     private String movieGenre;
     private Integer movieLength;
