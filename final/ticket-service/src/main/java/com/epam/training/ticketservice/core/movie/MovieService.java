@@ -11,7 +11,7 @@ public interface MovieService {
     List<MovieDto> getMovieList();
     Optional<MovieDto> getMovieByName(String movieTitle);
 
-    void updateMovie(String movieTitle);
+    void updateMovie(MovieDto movieDto);
     void createMovie(MovieDto movieDto);
 
     void deleteMovie(String movieTitle);

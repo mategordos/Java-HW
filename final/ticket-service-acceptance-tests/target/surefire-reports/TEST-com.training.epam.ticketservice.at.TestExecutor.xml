@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="17" failures="17" name="com.training.epam.ticketservice.at.TestExecutor" time="2.894" errors="0" skipped="0">
+<testsuite tests="17" failures="17" name="com.training.epam.ticketservice.at.TestExecutor" time="3.564" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.4+8-LTS"/>
@@ -57,7 +57,7 @@
     <property name="java.vendor.version" value="Corretto-17.0.4.8.1"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="0.414">
+  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="0.999">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -65,7 +65,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="0.156">
+  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="0.163">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -73,7 +73,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="0.155">
+  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="0.162">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -81,7 +81,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="0.155">
+  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="0.16">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -89,7 +89,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="0.155">
+  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -97,7 +97,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="0.155">
+  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="0.16">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -105,7 +105,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="0.155">
+  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -113,7 +113,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="0.155">
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="0.16">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -121,7 +121,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="0.155">
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -129,7 +129,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="0.155">
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -137,7 +137,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="0.154">
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -145,7 +145,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature:4)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="0.155">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="0.161">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -153,7 +153,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="0.154">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="0.16">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -161,7 +161,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="0.155">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -169,7 +169,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="0.155">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="0.16">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -177,7 +177,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="0.157">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="0.166">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)
@@ -185,7 +185,7 @@
 	at ✽.the application is started(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:3)
 </failure>
   </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="0.154">
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="0.159">
     <failure message="The service is not running." type="java.lang.AssertionError">java.lang.AssertionError: The service is not running.
 	at com.training.epam.ticketservice.at.ProcessUnderTest.verifyProcessIsRunning(ProcessUnderTest.java:92)
 	at com.training.epam.ticketservice.at.ProcessUnderTest.run(ProcessUnderTest.java:37)

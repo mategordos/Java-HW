@@ -18,3 +18,27 @@
 1669810228789:sign out
 1669810231159:describe account
 1669810423487:exit
+1669843725994:sign in admin admin
+1669843740542:describe account
+1669843749464:sign in priviliged
+1669843754178:sign in priviliged admin admin
+1669843764626:siogn out
+1669843765835:sign out
+1669843772547:sign in priviliged user user
+1669843785917:exit
+1669843950455:quit
+1669847599880:exit
+1669853714320:sign in admin admin
+1669853720848:sign in priviliged admin admin
+1669853822822:create movie Sátántangó dráma 450
+1669853835629:update movie Sátántangó krimi 420
+1669853845814:list movies
+1669853870372:create movie "Spirited Away" animation 125
+1669853874269:list movies
+1669853894800:exit
+1669854084744:list
+1669854088172:list movies
+1669889412962:sign in priviliged admin admin
+1669889825506:describe account
+1669889903798:sign in priviliged admin admin
+1669889907121:describe account

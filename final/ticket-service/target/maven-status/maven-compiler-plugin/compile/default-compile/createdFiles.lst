@@ -18,4 +18,5 @@ com/epam/training/ticketservice/Application.class
 com/epam/training/ticketservice/core/movie/model/MovieDto$MovieDtoBuilder.class
 com/epam/training/ticketservice/core/room/RoomServiceImpl.class
 com/epam/training/ticketservice/core/user/UserServiceImpl.class
+com/epam/training/ticketservice/ui/command/ExitCommand.class
 com/epam/training/ticketservice/core/movie/model/MovieDto.class

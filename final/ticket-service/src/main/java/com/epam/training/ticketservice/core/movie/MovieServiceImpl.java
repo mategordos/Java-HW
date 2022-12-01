@@ -4,8 +4,11 @@ import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
 import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -25,7 +28,7 @@ public class MovieServiceImpl implements MovieService{
 
     @Override
     public Optional<MovieDto> getMovieByName(String movieTitle) {
-        return convertEntityToDto(movieRepository.findMovieByName(movieTitle));
+        return convertEntityToDto(movieRepository.findMovieByMovieTitle(movieTitle));
     }
 
     @Override
@@ -37,13 +40,20 @@ public class MovieServiceImpl implements MovieService{
     }
 
     @Override
-    public void updateMovie(String movieTitle) {
-
+    public void updateMovie(MovieDto movieDto) {
+        Optional<Movie> movie = movieRepository.findMovieByMovieTitle(movieDto.getMovieTitle());
+        if (movie.isPresent())
+        {
+            movie.get().setMovieGenre(movieDto.getMovieGenre());
+            movie.get().setMovieLength(movieDto.getMovieLength());
+            movieRepository.save(movie.get());
+        } else {
+            throw new IllegalArgumentException("Movie does not exist!");
+        }
     }
 
     @Override
     public void deleteMovie(String movieTitle) {
-
     }
 
     private MovieDto convertEntityToDto(Movie movie){

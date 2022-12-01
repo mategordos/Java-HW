@@ -1,5 +1,6 @@
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java
+/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ExitCommand.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/MovieCommand.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/entity/Movie.java
 /mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomService.java

@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.shell.Availability;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
 
 @ShellComponent
 @AllArgsConstructor
@@ -18,6 +19,7 @@ public class MovieCommand {
 
     private final MovieService movieService;
     private final UserService userService;
+
 
     @ShellMethod(key = "list movies", value = "List the existing movies")
     public List<MovieDto> listMovies() {
@@ -27,7 +29,7 @@ public class MovieCommand {
         }
         return movieList;
     }
-
+    @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create movie", value = "Create new movie")
     public MovieDto createMovie(String movieTitle, String movieGenre, Integer movieLength) {
         MovieDto movieDto = MovieDto.builder()
@@ -39,6 +41,17 @@ public class MovieCommand {
         return movieDto;
     }
 
+    @ShellMethodAvailability("isAvailable")
+    @ShellMethod(key = "update movie", value = "Update an existing movie")
+    public MovieDto updateMovie(String movieTitle, String movieGenre, Integer movieLength) {
+        MovieDto movieDto = MovieDto.builder()
+                .movieTitle(movieTitle)
+                .movieGenre(movieGenre)
+                .movieLength(movieLength)
+                .build();
+        movieService.updateMovie(movieDto);
+        return movieDto;
+    }
 
 
     //not in use yet

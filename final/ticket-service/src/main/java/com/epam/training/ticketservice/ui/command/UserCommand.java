@@ -6,6 +6,7 @@ import java.util.Optional;
 import lombok.AllArgsConstructor;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.commands.Quit;
 
 @ShellComponent
 @AllArgsConstructor
@@ -28,7 +29,7 @@ public class UserCommand {
         if (user.isEmpty()) {
             return "Login failed due to incorrect creditentials";
         }
-        return user.get() + " is successfully logged in!";
+        return "Successful login!";
     }
 
     @ShellMethod(key = "describe account", value = "Get account description")
@@ -37,11 +38,8 @@ public class UserCommand {
         if (user.isEmpty()) {
             return "You are not signed in";
         }
-        return user.get().toString();
+        return "Signed in with priviliged account '" + user.get().getUsername() + "'";
     }
 
-    @ShellMethod(key = "exit", value = "Terminate the current session.")
-    public void exit(){
-        System.exit(0);
-    }
+
 }
