@@ -110,3 +110,66 @@
 1669983922482:create movie asd drama 2
 1669983924736:list movies
 1669984404187:exit
+1669993822159:list screenings
+1669993839910:create movie Sátántangó drama 450
+1669993849716:sign in privileged admin admin
+1669993854606:create movie Sátántangó drama 450
+1669993866628:create room Mashallah 69 69
+1669993914926:create screening Sátántangó Mashallah 2022:12:03 12:00
+1669994391506:create movie Sátántangó cringe 10
+1669994397205:sign in privileged admin admin
+1669994401056:create movie Sátántangó cringe 10
+1669994406167:create room CringeRoom 5 5
+1669994423670:create screening Sátántangó CringeRoom 2022:12:02 16:51
+1669994569876:sign in privileged admin admin
+1669994574747:create movie asd df 12
+1669994582910:create room dsa 4 4
+1669994584922:list rooms
+1669994587045:list movies
+1669994596158:create screening asd dsa 2022:12:02
+1669994600061:list screenings
+1669994608025:list screening
+1669994611407:list screenings
+1669995046279:sign in admin privileged
+1669995054033:sign in privileged admin admin
+1669995057934:create movie asd d 123
+1669995065940:create room fff 5 5
+1669995083513:create screening asd fff 2022:12:05 17:00
+1669995097470:create screening asd fff 2022-12-05 17:00
+1669995112585:stacktrace
+1669995499865:sign in privileged admin admin
+1669995504589:create movie asd ad 12
+1669995508728:create room ads 41 41
+1669995521072:create screening asd ads 2022:12:03 15:00
+1669995661052:sign in privileged admin admin
+1669995667536:create movie asd d 4
+1669995673013:create room d 4 5
+1669995681117:create screening asd d 2022:12:05 10:00
+1669995712060:list screenings
+1669995720972:delete screening asd d 2022:12:05 10:00
+1669995940056:sign in privileged admin admin
+1669995944763:create movie asd d 2
+1669995948548:create room dsa 3 3
+1669995958670:create screening asd dsa 2023:01:01 00:00
+1669996018765:create screening asd dsa 2023-01-01 00:00
+1669997395774:sign in privileged admin admin
+1669997401028:create movie asd g 12
+1669997409028:create room dsa 2 2
+1669997419633:create screening asd dsa 2022:12:03 11:00
+1669997430663:create screening asd dsa "2022:12:03 11:00"
+1669997551887:create screening asd dsa "2022-12-03 11:00"
+1669997563743:list screenings
+1669997632509:sign in privileged admin admin
+1669997637100:create movie asd d 15
+1669997640372:create room dsa 1 1
+1669997647789:create screening asd dsa 2022-12-03 00:00
+1669997656560:create screening asd dsa "2022-12-03 00:00"
+1669997659790:list screenings
+1669997853631:sign in privileged admin admin
+1669997858442:create movie asd d 12
+1669997862278:create room dsa 1 1
+1669997876195:creates screening asd dsa "2022-12-03 00:00"
+1669997888121:create screening asd dsa "2022-12-03 00:00"
+1669997891445:list screenings
+1669997907748:create screening asd dsa "2022-12-04 00:00"
+1669997910124:list screenings

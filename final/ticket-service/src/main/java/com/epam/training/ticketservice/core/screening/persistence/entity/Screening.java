@@ -21,6 +21,7 @@ public class Screening {
         private Movie movie;
         @ManyToOne
         private Room room;
+        @Temporal(TemporalType.TIMESTAMP)
         private Date screeningStartDate;
 
         public Screening(Movie movie, Room room, Date screeningStartDate){

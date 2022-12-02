@@ -9,6 +9,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,11 +23,11 @@ public class ScreeningCommand {
 
     private final UserService userService;
     @ShellMethod(key = "create screening", value = "Create a new screening")
-    public void createScreening(String movieTitle, String roomName, Date screeningStartDate) {
+    public void createScreening(String movieTitle, String roomName, String screeningStartDate) throws ParseException {
         ScreeningDto screeningDto = ScreeningDto.builder()
-                        .movieTitle(movieTitle)
-                                .roomName(roomName)
-                                        .screeningStartDate(screeningStartDate)
+                .movieTitle(movieTitle)
+                .roomName(roomName)
+                .screeningStartDate(convertStringToDate(screeningStartDate))
                 .build();
         screeningService.createScreening(screeningDto);
     }
@@ -37,11 +39,25 @@ public class ScreeningCommand {
             return ("There are no screenings");
         } else {
             return screeningList.stream()
-                    .map(screening -> String.format("%s (%s, %d)",
-                            screening.getMovieTitle(),screening.getRoomName(),screening.getScreeningStartDate()))
+                    .map(screening -> String.format("%s (%s, %s)",
+                            screening.getMovieTitle(),screening.getRoomName(),convertDateToString(screening.getScreeningStartDate())))
                     .collect(Collectors.joining("\n"));
         }
     }
 
+    @ShellMethod(key = "delete screening", value = "Delete an existing screening")
+    public void deleteScreening(ScreeningDto screeningDto) {
+        screeningService.deleteScreening(screeningDto);
+    }
 
+
+    private Date convertStringToDate(String date) throws ParseException {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm")
+                .parse(date);
+    }
+
+    private String convertDateToString(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm")
+                .format(date);
+    }
 }

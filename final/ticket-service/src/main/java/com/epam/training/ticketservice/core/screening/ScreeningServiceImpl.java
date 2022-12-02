@@ -38,7 +38,7 @@ public class ScreeningServiceImpl implements ScreeningService{
 
     @Override
     public void deleteScreening(ScreeningDto screeningDto) {
-        screeningRepository.deleteScreeningByScreeningDto();
+        screeningRepository.deleteScreeningByScreeningDto(screeningDto);
     }
 
     @Override
