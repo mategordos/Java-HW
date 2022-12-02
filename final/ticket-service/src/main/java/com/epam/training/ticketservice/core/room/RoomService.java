@@ -7,9 +7,7 @@ import java.util.Optional;
 
 public interface RoomService {
     List<RoomDto> getRoomList();
-
     void createRoom(RoomDto roomDto);
-
     void updateRoom(RoomDto roomDto);
     void deleteRoom(String roomName);
 }

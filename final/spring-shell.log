@@ -42,3 +42,71 @@
 1669889825506:describe account
 1669889903798:sign in priviliged admin admin
 1669889907121:describe account
+1669928305432:create movie asd drama 23
+1669928316922:sign in priviliged admin admin
+1669928322473:describe account
+1669928334352:create movie Sátántangó drama 450
+1669928339241:list movies
+1669928347115:create movie Asd cringe 150
+1669928350148:list movies
+1669928388940:exit
+1669929529072:create room TestSzoba 5 6
+1669929533447:list rooms
+1669929540046:create room TesztSzoba2 7 2
+1669929543401:list rooms
+1669929555135:sign in priviliged admin admin
+1669929575376:update room TestSzoba 7 4
+1669929581044:list rooms
+1669929956966:create room Asd 10 4
+1669929962059:delete room Asd
+1669939406508:create movie Sátántangó drama 450
+1669939421387:sign in priviliged admin admin
+1669939435013:sign in privileged admin admin
+1669939442323:create movie Sátántangó drama 450
+1669939444351:list movies
+1669939793159:create movie Sátántangó drama 450
+1669939801350:sign in priviliged admin admin
+1669939808504:create movie Sátántangó drama 450
+1669939817070:sign in privileged admin admin
+1669939822934:create movie Sátántangó drama 450
+1669939826729:list movies
+1669940089793:sign in privileged admin admin
+1669940093831:create movie Sátántangó drama 450
+1669940096291:list movies
+1669941089173:sign in privileged admin admin
+1669941097461:create movie Sátántangó drama 450
+1669941101664:list movies
+1669941110427:create movie Sátánsalsa krimi 150
+1669941112862:list movies
+1669941120143:delete movie Sátánsalsa
+1669941550517:sign in privileged admin admin
+1669941555381:create movie asd f 40
+1669941557845:list movies
+1669941560556:delete movie asd
+1669941661170:list movies
+1669941668601:sign in privileged admin admin
+1669941671558:create movie asd f 12
+1669941674189:list movies
+1669941679156:delete movie asd
+1669941681427:list movies
+1669943132013:sign in privileged admin admin
+1669943138621:update movie asd f 2
+1669943145978:create movie asd f 2
+1669943149854:list movies
+1669943162763:update movie asd hh 5
+1669943165549:list movies
+1669943171046:delete asd
+1669943174727:delete movie asd
+1669943176488:list movies
+1669979148152:sign in privileged admin admin
+1669979154944:create movie Sátántangó drama 450
+1669979157976:list movies
+1669982359265:create room asd 4 5
+1669982361360:list rooms
+1669982368716:delete room asad
+1669982372783:delete room asd
+1669982374916:list rooms
+1669983470366:exit
+1669983922482:create movie asd drama 2
+1669983924736:list movies
+1669984404187:exit

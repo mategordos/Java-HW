@@ -23,11 +23,11 @@ public class UserCommand {
         return user.get() + " is logged out!";
     }
 
-    @ShellMethod(key = "sign in priviliged", value = "Signing in with admin")
+    @ShellMethod(key = "sign in privileged", value = "Signing in with admin")
     public String signIn(String username, String password) {
         Optional<UserDto> user = userService.login(username, password);
         if (user.isEmpty()) {
-            return "Login failed due to incorrect creditentials";
+            return "Login failed due to incorrect credentials";
         }
         return "Successful login!";
     }
@@ -38,7 +38,7 @@ public class UserCommand {
         if (user.isEmpty()) {
             return "You are not signed in";
         }
-        return "Signed in with priviliged account '" + user.get().getUsername() + "'";
+        return "Signed in with privileged account '" + user.get().getUsername() + "'";
     }
 
 
