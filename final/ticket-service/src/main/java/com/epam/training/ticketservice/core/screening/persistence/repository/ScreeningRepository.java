@@ -10,14 +10,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 @Repository
 public interface ScreeningRepository extends JpaRepository<Screening, String> {
-
     @Transactional
-    @Modifying
-    @Query("delete from Screening s where s.movie = :#{dto.movieTitle} and"
-            + " s.room = :#{dto.roomName} and s.screeningStartDate = :#{dto.screeningStartDate}")
-    void deleteScreeningByScreeningDto(@Param("dto")ScreeningDto dto);
+    void deleteByMovie_MovieTitleLikeAndRoom_RoomNameLikeAndScreeningStartDate(String movieTitle,
+                                                                               String roomName, Date screeningStartDate);
 }

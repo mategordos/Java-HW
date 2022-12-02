@@ -173,3 +173,42 @@
 1669997891445:list screenings
 1669997907748:create screening asd dsa "2022-12-04 00:00"
 1669997910124:list screenings
+1670016327052:sign in privileged admin admin
+1670016332430:create movie asd d 12
+1670016336521:create room d 4 4
+1670016349141:create screening asd d 2022-12-03 00:00
+1670016361007:create screening asd d "2022-12-03 00:00"
+1670016365558:list screenings
+1670016378506:delete screening asd d "2022-12-03 00:00"
+1670016590622:sign in privileged admin admin
+1670016593277:create movie asd d 120
+1670016596822:create room f 12 12
+1670016607413:create screening asd f "2022-12-03 22:00"
+1670016609821:list screenings
+1670016618969:delete screening asd f "2022-12-03 22:00"
+1670016656972:stacktrace
+1670016798623:sign in priveleged admin admin
+1670016805086:sign in privileged admin admin
+1670016825098:create movie asd f 120
+1670016832963:create room g 12 12
+1670016852162:create screening asd g "2024-01-01 00:00"
+1670016855168:list screenings
+1670016864772:delete screening asd g "2024-01-01 00:00"
+1670017079774:sign in privileged admin admin
+1670017083017:create movie asd d 120
+1670017086837:create room g 12 12
+1670017095284:create screening asd g "2023-01-01 00:00"
+1670017106610:delete screenings asd g "2023-01-01 00:00"
+1670017118925:delete screening asd g "2023-01-01 00:00"
+1670017985990:sign in privileged admin admin
+1670017989156:create movie asd f 120
+1670017994483:create room g 11 11
+1670018009927:creates screening asd g "2023-01-01 00:00"
+1670018016938:create screening asd g "2023-01-01 00:00"
+1670018030009:delete screening asd g "2023-01-01 00:00"
+1670018075823:sign in privileged admin admin
+1670018092836:create movie asd g 120
+1670018095928:create room h 12 12
+1670018104436:create screening asd h "2023-01-01 00:00"
+1670018111263:delete screening asd h "2023-01-01 00:00"
+1670018115229:list screenings

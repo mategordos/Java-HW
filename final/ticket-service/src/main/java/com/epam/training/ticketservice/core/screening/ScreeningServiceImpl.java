@@ -11,6 +11,7 @@ import com.epam.training.ticketservice.core.screening.persistence.repository.Scr
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -37,8 +38,8 @@ public class ScreeningServiceImpl implements ScreeningService{
     }
 
     @Override
-    public void deleteScreening(ScreeningDto screeningDto) {
-        screeningRepository.deleteScreeningByScreeningDto(screeningDto);
+    public void deleteScreening(String movieTitle, String roomName, Date screeningStartDate) {
+        screeningRepository.deleteByMovie_MovieTitleLikeAndRoom_RoomNameLikeAndScreeningStartDate(movieTitle, roomName, screeningStartDate);
     }
 
     @Override

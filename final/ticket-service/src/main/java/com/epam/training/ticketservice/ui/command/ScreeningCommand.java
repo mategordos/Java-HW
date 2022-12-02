@@ -46,8 +46,8 @@ public class ScreeningCommand {
     }
 
     @ShellMethod(key = "delete screening", value = "Delete an existing screening")
-    public void deleteScreening(ScreeningDto screeningDto) {
-        screeningService.deleteScreening(screeningDto);
+    public void deleteScreening(String movieTitle, String roomName, String screeningStartDate) throws ParseException {
+        screeningService.deleteScreening(movieTitle, roomName, convertStringToDate(screeningStartDate));
     }
 
 
