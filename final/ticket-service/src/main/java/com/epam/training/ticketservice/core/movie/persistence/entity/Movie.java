@@ -3,6 +3,7 @@ package com.epam.training.ticketservice.core.movie.persistence.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 
 import javax.persistence.*;
@@ -25,4 +26,9 @@ public class Movie {
         this.movieLength = movieLength;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s (%s, %d minutes)",
+                movieTitle, movieGenre, movieLength);
+    }
 }

@@ -24,4 +24,12 @@ public class Room {
         this.columnLength = columnLength;
     }
 
+
+
+    @Override
+    public String toString() {
+        return String.format("%s (%s, %d minutes)",
+                roomName, rowLength, columnLength);
+    }
+
 }

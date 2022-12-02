@@ -81,6 +81,4 @@ public class RoomCommand {
                 : Availability.unavailable("You are not an admin!");
     }
 
-
-
 }

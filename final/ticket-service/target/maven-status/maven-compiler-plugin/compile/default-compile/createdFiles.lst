@@ -7,12 +7,17 @@ com/epam/training/ticketservice/core/room/persistence/entity/Room.class
 com/epam/training/ticketservice/core/room/RoomService.class
 com/epam/training/ticketservice/core/user/UserService.class
 com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.class
+com/epam/training/ticketservice/core/screening/ScreeningService.class
+com/epam/training/ticketservice/core/screening/persistence/entity/Screening.class
 com/epam/training/ticketservice/ui/command/MovieCommand.class
 com/epam/training/ticketservice/ui/command/UserCommand.class
+com/epam/training/ticketservice/core/screening/persistence/repository/ScreeningRepository.class
 com/epam/training/ticketservice/core/room/RoomServiceImpl.class
 com/epam/training/ticketservice/core/room/persistence/repository/RoomRepository.class
+com/epam/training/ticketservice/core/screening/model/ScreeningDto.class
 com/epam/training/ticketservice/core/user/UserServiceImpl.class
 com/epam/training/ticketservice/ui/command/ExitCommand.class
+com/epam/training/ticketservice/core/screening/ScreeningServiceImpl.class
 com/epam/training/ticketservice/core/user/persistence/entity/User$Role.class
 com/epam/training/ticketservice/core/user/persistence/entity/User.class
 com/epam/training/ticketservice/core/user/model/UserDto.class
@@ -20,6 +25,8 @@ com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.
 com/epam/training/ticketservice/ui/configuration/PromptConfiguration.class
 com/epam/training/ticketservice/core/movie/persistence/repository/MovieRepository.class
 com/epam/training/ticketservice/core/room/model/RoomDto$RoomDtoBuilder.class
+com/epam/training/ticketservice/ui/command/ScreeningCommand.class
+com/epam/training/ticketservice/core/screening/model/ScreeningDto$ScreeningDtoBuilder.class
 com/epam/training/ticketservice/Application.class
 com/epam/training/ticketservice/core/movie/model/MovieDto$MovieDtoBuilder.class
 com/epam/training/ticketservice/core/movie/model/MovieDto.class
