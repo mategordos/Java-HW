@@ -12,6 +12,7 @@ public interface MovieRepository extends JpaRepository<Movie, String> {
 
     @Transactional
     Optional<Movie> findMovieByMovieTitle(String movieTitle);
+
     @Transactional
-    void deleteMovieByMovieTitle (String movieTitle);
+    void deleteMovieByMovieTitle(String movieTitle);
 }

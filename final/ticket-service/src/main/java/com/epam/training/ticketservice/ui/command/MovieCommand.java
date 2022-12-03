@@ -36,6 +36,7 @@ public class MovieCommand {
                     .collect(Collectors.joining("\n"));
         }
     }
+
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create movie", value = "Create new movie")
     public void createMovie(String movieTitle, String movieGenre, Integer movieLength) {

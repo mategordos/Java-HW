@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-public class MovieServiceImpl implements MovieService{
+public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
 
@@ -36,8 +36,7 @@ public class MovieServiceImpl implements MovieService{
     @Override
     public void updateMovie(MovieDto movieDto) {
         Optional<Movie> movie = movieRepository.findMovieByMovieTitle(movieDto.getMovieTitle());
-        if (movie.isPresent())
-        {
+        if (movie.isPresent()) {
             movie.get().setMovieGenre(movieDto.getMovieGenre());
             movie.get().setMovieLength(movieDto.getMovieLength());
             movieRepository.save(movie.get());
@@ -51,12 +50,12 @@ public class MovieServiceImpl implements MovieService{
         movieRepository.deleteMovieByMovieTitle(movieTitle);
     }
 
-    private MovieDto convertEntityToDto(Movie movie){
+    private MovieDto convertEntityToDto(Movie movie) {
         return  MovieDto.builder()
                 .movieTitle(movie.getMovieTitle())
                 .movieGenre(movie.getMovieGenre())
-                .movieLength(movie.getMovieLength()).
-                build();
+                .movieLength(movie.getMovieLength())
+                .build();
     }
 
 

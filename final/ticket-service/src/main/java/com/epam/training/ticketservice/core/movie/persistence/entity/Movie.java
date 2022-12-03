@@ -3,10 +3,11 @@ package com.epam.training.ticketservice.core.movie.persistence.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 @Data
@@ -20,7 +21,7 @@ public class Movie {
     private String movieGenre;
     private Integer movieLength;
 
-    public Movie(String movieTitle, String movieGenre, Integer movieLength){
+    public Movie(String movieTitle, String movieGenre, Integer movieLength) {
         this.movieTitle = movieTitle;
         this.movieGenre = movieGenre;
         this.movieLength = movieLength;

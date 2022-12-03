@@ -3,7 +3,10 @@ package com.epam.training.ticketservice.core.room.persistence.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 @Data
@@ -18,7 +21,7 @@ public class Room {
     private Integer rowLength;
     private Integer columnLength;
 
-    public Room(String roomName,Integer rowLength, Integer columnLength){
+    public Room(String roomName,Integer rowLength, Integer columnLength) {
         this.roomName = roomName;
         this.rowLength = rowLength;
         this.columnLength = columnLength;

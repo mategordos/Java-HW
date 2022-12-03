@@ -5,88 +5,38 @@
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java">
-<error line="9" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="10" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="11" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java">
-<error line="12" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="13" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieServiceImpl.java">
-<error line="16" column="54" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="40" column="9" severity="warning" message="&apos;{&apos; at column 9 should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="54" column="53" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="58" column="53" severity="warning" message="&apos;.&apos; should be on a new line." source="SeparatorWrapDot"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/entity/Movie.java">
-<error line="9" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="23" column="76" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/repository/MovieRepository.java">
-<error line="15" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="16" column="34" severity="warning" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/model/RoomDto.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/entity/Room.java">
-<error line="6" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="21" column="73" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/repository/RoomRepository.java">
-<error line="17" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="18" column="27" severity="warning" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomService.java">
-<error line="10" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="11" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="12" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomServiceImpl.java">
-<error line="31" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="48" column="9" severity="warning" message="&apos;{&apos; at column 9 should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="57" column="50" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="61" column="54" severity="warning" message="&apos;.&apos; should be on a new line." source="SeparatorWrapDot"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/model/ScreeningDto.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/entity/Screening.java">
-<error line="8" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="17" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="20" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="22" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="24" severity="warning" message="&apos;member def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="27" severity="warning" message="&apos;ctor def modifier&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="27" column="74" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="28" severity="warning" message="&apos;ctor def&apos; child has incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="29" severity="warning" message="&apos;ctor def&apos; child has incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="30" severity="warning" message="&apos;ctor def&apos; child has incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="31" severity="warning" message="&apos;ctor def rcurly&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="32" severity="warning" message="&apos;class def rcurly&apos; has incorrect indentation level 4, expected level should be 0." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/repository/ScreeningRepository.java">
-<error line="20" severity="warning" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningService.java">
-<error line="10" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="11" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="11" column="10" severity="warning" message="GenericWhitespace &apos;&lt;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningServiceImpl.java">
-<error line="22" column="62" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="31" severity="warning" message="Line is longer than 120 characters (found 140)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="40" severity="warning" message="Line is longer than 120 characters (found 124)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="70" severity="warning" message="Line is longer than 120 characters (found 124)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="87" severity="warning" message="Line is longer than 120 characters (found 122)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="116" column="65" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="120" column="71" severity="warning" message="&apos;.&apos; should be on a new line." source="SeparatorWrapDot"/>
-<error line="134" severity="warning" message="Line is longer than 120 characters (found 125)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="139" severity="warning" message="Line is longer than 120 characters (found 188)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/model/UserDto.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/entity/User.java">
-<error line="6" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.java">
 </file>
@@ -97,17 +47,10 @@
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ExitCommand.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/MovieCommand.java">
-<error line="39" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/RoomCommand.java">
-<error line="40" severity="warning" message="Line is longer than 120 characters (found 139)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="48" severity="warning" message="&apos;method def&apos; child has incorrect indentation level 7, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="72" column="5" severity="warning" message="&apos;{&apos; at column 5 should be on the previous line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ScreeningCommand.java">
-<error line="35" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
-<error line="43" severity="warning" message="&apos;method def&apos; child has incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="45" severity="warning" message="&apos;METHOD_DEF&apos; should be separated from previous statement." source="com.puppycrawl.tools.checkstyle.checks.whitespace.EmptyLineSeparatorCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/UserCommand.java">
 </file>

@@ -5,7 +5,13 @@ import com.epam.training.ticketservice.core.room.persistence.entity.Room;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 
@@ -14,19 +20,19 @@ import java.util.Date;
 @NoArgsConstructor
 public class Screening {
 
-        @Id
-        @GeneratedValue
-        private long id;
-        @ManyToOne
-        private Movie movie;
-        @ManyToOne
-        private Room room;
-        @Temporal(TemporalType.TIMESTAMP)
-        private Date screeningStartDate;
+    @Id
+    @GeneratedValue
+    private long id;
+    @ManyToOne
+    private Movie movie;
+    @ManyToOne
+    private Room room;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date screeningStartDate;
 
-        public Screening(Movie movie, Room room, Date screeningStartDate){
-            this.movie = movie;
-            this.room = room;
-            this.screeningStartDate = screeningStartDate;
-        }
+    public Screening(Movie movie, Room room, Date screeningStartDate) {
+        this.movie = movie;
+        this.room = room;
+        this.screeningStartDate = screeningStartDate;
     }
+}

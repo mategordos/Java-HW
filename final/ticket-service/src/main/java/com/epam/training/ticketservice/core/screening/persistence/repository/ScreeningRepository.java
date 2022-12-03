@@ -17,7 +17,7 @@ import java.util.List;
 @Repository
 public interface ScreeningRepository extends JpaRepository<Screening, String> {
     void deleteByMovie_MovieTitleLikeAndRoom_RoomNameLikeAndScreeningStartDate(String movieTitle,
-                                                                               String roomName, Date screeningStartDate);
+                                                                               String roomName,Date screeningStartDate);
 
     List<Screening> findByScreeningStartDateAfterAndRoom_RoomName(Date screeningStartDate, String roomName);
 

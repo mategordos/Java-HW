@@ -27,11 +27,10 @@ import java.util.stream.Collectors;
 @ShellComponent
 public class ScreeningCommand {
 
-
     private final MovieRepository movieRepository;
     private final ScreeningService screeningService;
-
     private final UserService userService;
+
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create screening", value = "Create a new screening")
     public void createScreening(String movieTitle, String roomName, String screeningStartDate) throws ParseException {
@@ -40,8 +39,9 @@ public class ScreeningCommand {
                     .roomName(roomName)
                     .screeningStartDate(convertStringToDate(screeningStartDate))
                     .build();
-            screeningService.createScreening(screeningDto);
+        screeningService.createScreening(screeningDto);
     }
+
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "list screenings", value = "List the existing screenings")
     public String listScreenings() {

@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 @Builder
 public class MovieDto {
-        private final String movieTitle;
-        private final String movieGenre;
-        private final int movieLength;
+    private final String movieTitle;
+    private final String movieGenre;
+    private final int movieLength;
 }

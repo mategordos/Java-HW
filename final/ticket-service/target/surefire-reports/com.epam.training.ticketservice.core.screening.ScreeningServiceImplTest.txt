@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.epam.training.ticketservice.core.screening.ScreeningServiceImplTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.124 s <<< FAILURE! - in com.epam.training.ticketservice.core.screening.ScreeningServiceImplTest
-com.epam.training.ticketservice.core.screening.ScreeningServiceImplTest.testCreateScreeningShouldStoreScreeningIfInputScreeningIsValid  Time elapsed: 0.01 s  <<< ERROR!
-java.util.NoSuchElementException: No value present
-	at com.epam.training.ticketservice.core.screening.ScreeningServiceImplTest.testCreateScreeningShouldStoreScreeningIfInputScreeningIsValid(ScreeningServiceImplTest.java:60)
-

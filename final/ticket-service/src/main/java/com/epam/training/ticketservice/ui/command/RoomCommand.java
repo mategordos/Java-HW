@@ -23,11 +23,8 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class RoomCommand {
 
-
     private final RoomService roomService;
-
     private final UserService userService;
-
 
     @ShellMethod(key = "list rooms", value = "List the existing rooms")
     public String listRooms() {
@@ -37,7 +34,8 @@ public class RoomCommand {
         } else {
             return roomList.stream()
                     .map(room -> String.format("Room %s with %d seats, %d rows and %d columns",
-                            room.getRoomName(), room.getRowLength() * room.getColumnLength(), room.getRowLength(), room.getColumnLength()))
+                            room.getRoomName(), room.getRowLength() * room.getColumnLength(),
+                            room.getRowLength(), room.getColumnLength()))
                     .collect(Collectors.joining("\n"));
         }
     }
@@ -45,14 +43,13 @@ public class RoomCommand {
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create room", value = "Create new room")
     public void createRoom(String roomName, Integer rowLength, Integer columnLength) {
-       RoomDto roomDto = RoomDto.builder()
+        RoomDto roomDto = RoomDto.builder()
                 .roomName(roomName)
                 .rowLength(rowLength)
                 .columnLength(columnLength)
                 .build();
         roomService.createRoom(roomDto);
     }
-
 
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "update room", value = "Update an existing room")
@@ -65,14 +62,11 @@ public class RoomCommand {
         roomService.updateRoom(roomDto);
     }
 
-
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "delete room", value = "Delete an existing room")
-    public void deleteRoom(String roomName)
-    {
+    public void deleteRoom(String roomName) {
         roomService.deleteRoom(roomName);
     }
-
 
     private Availability isAvailable() {
         Optional<UserDto> user = userService.describe();
@@ -80,5 +74,4 @@ public class RoomCommand {
                 ? Availability.available()
                 : Availability.unavailable("You are not an admin!");
     }
-
 }

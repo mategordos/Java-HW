@@ -10,12 +10,14 @@ import java.util.Optional;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, String> {
+
     @Transactional
     Optional<Room> findRoomByRoomName(String roomName);
 
     List<Room> findAll();
+
     @Transactional
-    void deleteByRoomName (String roomName);
+    void deleteByRoomName(String roomName);
 
 }
 
