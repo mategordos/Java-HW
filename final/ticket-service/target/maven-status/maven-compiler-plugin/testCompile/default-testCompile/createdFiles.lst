@@ -1,9 +1,0 @@
-com/epam/training/ticketservice/core/user/UserServiceImplTest$TestUserServiceImpl.class
-com/epam/training/ticketservice/ui/command/UserCommandTest.class
-com/epam/training/ticketservice/core/movie/MovieServiceImplTest.class
-com/epam/training/ticketservice/core/screening/ScreeningServiceImplTest.class
-com/epam/training/ticketservice/ui/command/RoomCommandTest.class
-com/epam/training/ticketservice/core/room/RoomServiceImplTest.class
-com/epam/training/ticketservice/ui/command/MovieCommandTest.class
-com/epam/training/ticketservice/core/user/UserServiceImplTest.class
-com/epam/training/ticketservice/ui/command/ScreeningCommandTest.class

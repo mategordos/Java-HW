@@ -27,7 +27,6 @@
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/model/ScreeningDto.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/entity/Screening.java">
-<error line="10" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/repository/ScreeningRepository.java">
 </file>
@@ -38,10 +37,6 @@
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/model/UserDto.java">
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/entity/User.java">
-<error line="3" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - lombok.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="6" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
-<error line="11" severity="warning" message="Annotation &apos;RequiredArgsConstructor&apos; should be alone on line." source="AnnotationLocationMostCases"/>
-<error line="11" severity="warning" message="Annotation &apos;Setter&apos; should be alone on line." source="AnnotationLocationMostCases"/>
 </file>
 <file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.java">
 </file>
