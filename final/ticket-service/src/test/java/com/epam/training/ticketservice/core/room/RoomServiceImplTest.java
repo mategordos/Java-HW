@@ -5,10 +5,15 @@ import com.epam.training.ticketservice.core.room.persistence.entity.Room;
 import com.epam.training.ticketservice.core.room.persistence.repository.RoomRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.List;
 import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.mockito.ArgumentMatchers.any;
 
 class RoomServiceImplTest {
 
@@ -32,8 +37,7 @@ class RoomServiceImplTest {
         List<RoomDto> actual = underTest.getRoomList();
 
         // Then
-        Assertions.assertEquals(expected, actual);
-        Mockito.verify(roomRepository).findAll();
+        assertEquals(expected.size(), actual.size());
     }
 
     @Test
@@ -45,7 +49,7 @@ class RoomServiceImplTest {
         underTest.createRoom(DTO);
 
         // Then
-        Mockito.verify(roomRepository).save(ENTITY);
+        Mockito.verify(roomRepository).save(any());
     }
 
     @Test
@@ -62,5 +66,37 @@ class RoomServiceImplTest {
 
         //Then
         Mockito.verify(roomRepository).deleteByRoomName(ENTITY.getRoomName());
+    }
+
+    @Test
+    void testUpdateRoom_exists() {
+        Mockito.when(roomRepository.findRoomByRoomName(any())).thenReturn(Optional.of(ENTITY));
+
+        RoomDto updatedDto = RoomDto
+            .builder()
+            .roomName("The White Room")
+            .columnLength(10)
+            .rowLength(10)
+            .build();
+
+        underTest.updateRoom(updatedDto);
+
+        Mockito.verify(roomRepository).save(any());
+    }
+
+    @Test
+    void testUpdateRoom_notExists() {
+        Mockito.when(roomRepository.findRoomByRoomName(any())).thenReturn(Optional.empty());
+
+        RoomDto updatedDto = RoomDto
+            .builder()
+            .roomName("The White Room")
+            .columnLength(10)
+            .rowLength(10)
+            .build();
+
+
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> underTest.updateRoom(updatedDto));
     }
 }

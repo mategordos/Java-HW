@@ -19,7 +19,6 @@ public interface ScreeningRepository extends JpaRepository<Screening, String> {
     void deleteByMovie_MovieTitleLikeAndRoom_RoomNameLikeAndScreeningStartDate(String movieTitle,
                                                                                String roomName,Date screeningStartDate);
 
-    List<Screening> findByScreeningStartDateAfterAndRoom_RoomName(Date screeningStartDate, String roomName);
 
     List<Screening> findByRoom_RoomName(String roomName);
 

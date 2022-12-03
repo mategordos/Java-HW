@@ -55,9 +55,4 @@ public class RoomServiceImpl implements RoomService {
                 .columnLength(room.getColumnLength())
                 .build();
     }
-
-    private Optional<RoomDto> convertEntityToDto(Optional<Room> room) {
-        return room.isEmpty() ? Optional.empty() : Optional.of(convertEntityToDto(room.get()));
-    }
-
 }

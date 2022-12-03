@@ -69,9 +69,6 @@ public class RoomCommand {
     }
 
     private Availability isAvailable() {
-        Optional<UserDto> user = userService.describe();
-        return user.isPresent() && user.get().getRole() == User.Role.ADMIN
-                ? Availability.available()
-                : Availability.unavailable("You are not an admin!");
+        return userService.isAvailable();
     }
 }

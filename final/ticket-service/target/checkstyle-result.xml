@@ -1,63 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/Application.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/Application.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieServiceImpl.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieServiceImpl.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/entity/Movie.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/entity/Movie.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/repository/MovieRepository.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/persistence/repository/MovieRepository.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/model/RoomDto.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/model/RoomDto.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/entity/Room.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/entity/Room.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/repository/RoomRepository.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/persistence/repository/RoomRepository.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomService.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomService.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomServiceImpl.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/room/RoomServiceImpl.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/model/ScreeningDto.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/model/ScreeningDto.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/entity/Screening.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/entity/Screening.java">
+<error line="10" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/repository/ScreeningRepository.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/persistence/repository/ScreeningRepository.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningService.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningService.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningServiceImpl.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/screening/ScreeningServiceImpl.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/model/UserDto.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/model/UserDto.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/entity/User.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/entity/User.java">
+<error line="3" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - lombok.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="6" severity="warning" message="Using the &apos;.*&apos; form of import should be avoided - javax.persistence.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="11" severity="warning" message="Annotation &apos;RequiredArgsConstructor&apos; should be alone on line." source="AnnotationLocationMostCases"/>
+<error line="11" severity="warning" message="Annotation &apos;Setter&apos; should be alone on line." source="AnnotationLocationMostCases"/>
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/persistence/repository/UserRepository.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserService.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserService.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserServiceImpl.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/user/UserServiceImpl.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ExitCommand.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ExitCommand.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/MovieCommand.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/MovieCommand.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/RoomCommand.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/RoomCommand.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ScreeningCommand.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/ScreeningCommand.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/UserCommand.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/command/UserCommand.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/configuration/PromptConfiguration.java">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/java/com/epam/training/ticketservice/ui/configuration/PromptConfiguration.java">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/resources/application-prod.properties">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/resources/application-prod.properties">
 </file>
-<file name="/mnt/c/Users/Máté/Desktop/Projektek/Java-HW/final/ticket-service/src/main/resources/application.properties">
+<file name="/mnt/c/Users/Máté/Desktop/mate_hw (1)/mate_hw/final/ticket-service/src/main/resources/application.properties">
 </file>
 </checkstyle>

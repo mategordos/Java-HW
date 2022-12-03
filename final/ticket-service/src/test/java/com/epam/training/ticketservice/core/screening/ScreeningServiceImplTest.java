@@ -16,6 +16,7 @@
     import java.util.Optional;
 
     import static org.mockito.Mockito.mock;
+    import static org.mockito.Mockito.never;
 
     public class ScreeningServiceImplTest {
         private static final Movie MOVIE = new Movie("Shrek", "animation", 169);
@@ -29,7 +30,12 @@
         private static final Date DATE = convertStringToDate("2021-03-15 10:45");
         private static final Date DATE2 = convertStringToDate("2021-03-15 13:37");
         private static final Date DATE3 = convertStringToDate("2021-03-15 10:40");
-        private static final Screening ENTITY = new Screening(MOVIE, ROOM, DATE);
+        private static final Date DATE4 = convertStringToDate("2021-03-15 12:00");
+        private static final Date DATE5 = convertStringToDate("2021-03-15 09:07");
+        private static final Screening newScreening = new Screening(MOVIE, ROOM, DATE);
+        private static final Screening earlierScreening = new Screening(MOVIE, ROOM, DATE3);
+        private static final Screening laterScreening = new Screening(MOVIE, ROOM, DATE4);
+        private static final Screening earlierScreeningWithGap = new Screening(MOVIE, ROOM, DATE5);
         private static final ScreeningDto DTO = ScreeningDto.builder()
                 .movieTitle(MOVIE.getMovieTitle())
                 .roomName(ROOM.getRoomName())
@@ -53,19 +59,83 @@
 
 /*
         @Test
-        void testCreateScreeningShouldStoreScreeningIfInputScreeningIsValid() {
+        void testCreateScreening_noOtherScreening() {
             // Given
-            Mockito.when(screeningRepository.findByRoom_RoomName(ROOM.getRoomName())).thenReturn(List.of(ENTITY));
+            // no preexisting screenings
+            Mockito.when(screeningRepository.findByRoom_RoomName(ROOM.getRoomName())).thenReturn(List.of());
+
+            // valid/existing room
             Mockito.when(roomRepository.findRoomByRoomName(ROOM.getRoomName())).thenReturn(Optional.of(ROOM));
+            // valid/existing movie
             Mockito.when(movieRepository.findMovieByMovieTitle(MOVIE.getMovieTitle())).thenReturn(Optional.of(MOVIE));
-            Mockito.when(screeningRepository.findByScreeningStartDateAfterAndRoom_RoomName(DATE, ROOM.getRoomName())).thenReturn(List.of(ENTITY));
-            Mockito.when(screeningRepository.save(ENTITY)).thenReturn(ENTITY);
+            // can save entity
+            Mockito.when(screeningRepository.save(newScreening)).thenReturn(newScreening);
 
             // When
             underTest.createScreening(DTO);
 
             // Then
-            Mockito.verify(screeningRepository).save(ENTITY);
+            Mockito.verify(screeningRepository).save(newScreening);
+        }
+
+        @Test
+        void testCreateScreening_overlapWithEarlierScreening() {
+            // Given
+            // there's a screening that will overlap
+            Mockito.when(screeningRepository.findByRoom_RoomName(ROOM.getRoomName())).thenReturn(List.of(
+                earlierScreening
+            ));
+
+            // valid/existing room
+            Mockito.when(roomRepository.findRoomByRoomName(ROOM.getRoomName())).thenReturn(Optional.of(ROOM));
+            // valid/existing movie
+            Mockito.when(movieRepository.findMovieByMovieTitle(MOVIE.getMovieTitle())).thenReturn(Optional.of(MOVIE));
+
+            // When
+            underTest.createScreening(DTO);
+
+            // Then
+            Mockito.verify(screeningRepository, never()).save(newScreening);
+        }
+
+        @Test
+        void testCreateScreening_overlapWith10MinutesGap() {
+            // Given
+            // there's a screening that will overlap
+            Mockito.when(screeningRepository.findByRoom_RoomName(ROOM.getRoomName())).thenReturn(List.of(
+                earlierScreeningWithGap
+            ));
+
+            // valid/existing room
+            Mockito.when(roomRepository.findRoomByRoomName(ROOM.getRoomName())).thenReturn(Optional.of(ROOM));
+            // valid/existing movie
+            Mockito.when(movieRepository.findMovieByMovieTitle(MOVIE.getMovieTitle())).thenReturn(Optional.of(MOVIE));
+
+            // When
+            underTest.createScreening(DTO);
+
+            // Then
+            Mockito.verify(screeningRepository, never()).save(newScreening);
+        }
+
+        @Test
+        void testCreateScreening_overlapWithLaterScreening() {
+            // Given
+            // there's a screening that will overlap
+            Mockito.when(screeningRepository.findByRoom_RoomName(ROOM.getRoomName())).thenReturn(List.of(
+                laterScreening
+            ));
+
+            // valid/existing room
+            Mockito.when(roomRepository.findRoomByRoomName(ROOM.getRoomName())).thenReturn(Optional.of(ROOM));
+            // valid/existing movie
+            Mockito.when(movieRepository.findMovieByMovieTitle(MOVIE.getMovieTitle())).thenReturn(Optional.of(MOVIE));
+
+            // When
+            underTest.createScreening(DTO);
+
+            // Then
+            Mockito.verify(screeningRepository, never()).save(newScreening);
         }
         */
 

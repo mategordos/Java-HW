@@ -1,6 +1,8 @@
 package com.epam.training.ticketservice.core.user;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -9,7 +11,11 @@ import com.epam.training.ticketservice.core.user.model.UserDto;
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
 import com.epam.training.ticketservice.core.user.persistence.repository.UserRepository;
 import java.util.Optional;
+
+import lombok.AccessLevel;
+import lombok.Setter;
 import org.junit.jupiter.api.Test;
+import org.springframework.shell.Availability;
 
 class UserServiceImplTest {
 
@@ -105,6 +111,46 @@ class UserServiceImplTest {
         underTest.registerUser("user", "pass");
 
         // Then
-        verify(userRepository).save(new User("user", "pass", User.Role.USER));
+        verify(userRepository).save(any());
+    }
+
+    @Test
+    void testIsAvailable_available() {
+        TestUserServiceImpl underTest2 = new TestUserServiceImpl(userRepository);
+        underTest2.setLoggedInUser(new UserDto("admin", User.Role.ADMIN));
+
+        assertEquals(Availability.available().isAvailable(), underTest2.isAvailable().isAvailable());
+    }
+
+    @Test
+    void testIsAvailable_unavailable() {
+        TestUserServiceImpl underTest2 = new TestUserServiceImpl(userRepository);
+        underTest2.setLoggedInUser(null);
+
+        assertEquals(Availability.unavailable("reason").isAvailable(), underTest2.isAvailable().isAvailable());
+    }
+
+    @Test
+    void testIsAvailable_unavailableBecauseOfRole() {
+        TestUserServiceImpl underTest2 = new TestUserServiceImpl(userRepository);
+        underTest2.setLoggedInUser(new UserDto("user", User.Role.USER));
+
+        assertEquals(Availability.unavailable("reason").isAvailable(), underTest2.isAvailable().isAvailable());
+    }
+
+    private class TestUserServiceImpl extends UserServiceImpl {
+        private UserDto loggedInUser;
+
+        public TestUserServiceImpl(UserRepository userRepository) {
+            super(userRepository);
+        }
+
+        @Override public Optional<UserDto> describe() {
+            return Optional.ofNullable(loggedInUser);
+        }
+
+        public void setLoggedInUser(UserDto loggedInUser) {
+            this.loggedInUser = loggedInUser;
+        }
     }
 }

@@ -2,22 +2,19 @@ package com.epam.training.ticketservice.core.screening.persistence.entity;
 
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
 import com.epam.training.ticketservice.core.room.persistence.entity.Room;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.Hibernate;
 
-
-import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Date;
-
+import java.util.Objects;
 
 @Entity
-@Data
-@NoArgsConstructor
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class Screening {
 
     @Id

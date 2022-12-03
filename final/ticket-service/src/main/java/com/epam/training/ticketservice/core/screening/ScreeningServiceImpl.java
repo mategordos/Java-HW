@@ -99,7 +99,11 @@ public class ScreeningServiceImpl implements ScreeningService {
     }
 
 
-    private Optional<ScreeningDto> convertEntityToDto(Optional<Screening> screening) {
-        return screening.isEmpty() ? Optional.empty() : Optional.of(convertEntityToDto(screening.get()));
-    }
+
+
+
+
+
+
+
 }

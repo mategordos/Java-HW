@@ -1,0 +1,13 @@
+
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü‹ Ëúÿÿÿÿ8Ãû¸¦Í0
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý½£Ð8ò×ÆËÍ0
+{
+java:S1128"^Remove this unused import 'com.epam.training.ticketservice.core.room.persistence.entity.Room'.(Ö’ºó8‚ØÆËÍ0
+z
+java:S1128"^Remove this unused import 'com.epam.training.ticketservice.core.screening.model.ScreeningDto'.(ÇßæD8„ØÆËÍ0
+p
+java:S1128"NRemove this unused import 'org.springframework.data.jpa.repository.Modifying'.(—·Ñ”þÿÿÿÿ8…ØÆËÍ0
+l
+java:S1128"JRemove this unused import 'org.springframework.data.jpa.repository.Query'.(Äºöïþÿÿÿÿ8†ØÆËÍ0
+i
+java:S1128	"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8ŽÜ“¦Í0

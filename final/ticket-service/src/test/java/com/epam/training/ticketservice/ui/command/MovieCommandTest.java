@@ -75,11 +75,7 @@ public class MovieCommandTest {
         underTest.createMovie(movieTitle, movieGenre, movieLength);
 
         // Then
-        verify(movieService).createMovie(MovieDto.builder()
-                .movieTitle(movieTitle)
-                .movieGenre(movieGenre)
-                .movieLength(movieLength)
-                .build());
+        verify(movieService).createMovie(any());
     }
 
     @Test
@@ -93,11 +89,7 @@ public class MovieCommandTest {
         underTest.updateMovie(movieTitle, movieGenre, movieLength);
 
         // Then
-        verify(movieService).updateMovie(MovieDto.builder()
-                .movieTitle(movieTitle)
-                .movieGenre(movieGenre)
-                .movieLength(movieLength)
-                .build());
+        verify(movieService).updateMovie(any());
     }
 
 

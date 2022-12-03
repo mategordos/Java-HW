@@ -1,0 +1,15 @@
+
+s	java:S135."YReduce the total number of break and continue statements in this loop to use at most one.(é˜±ÿÿÿÿÿ
+f
+java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¿ŠÏš
+k
+java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¢‹†Âıÿÿÿÿ
+f
+java:S3655I"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŞØæ±
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(ò Åùÿÿÿÿ
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(±óµù
+P	java:S125i"<This block of commented-out lines of code should be removed.(“„f
+j
+java:S1128"TRemove this unused import 'com.epam.training.ticketservice.core.movie.MovieService'.(ˆ—ñ¬
+J
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ
