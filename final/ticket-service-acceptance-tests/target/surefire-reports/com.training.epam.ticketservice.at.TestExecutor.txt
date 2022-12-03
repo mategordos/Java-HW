@@ -1,22 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.training.epam.ticketservice.at.TestExecutor
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 262.476 sec <<< FAILURE!
-The admin can not create overlapping screenings in the same room(allows creating, deleting and listing screenings)  Time elapsed: 32.164 sec  <<< ERROR!
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:155)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.runWithTimeout(ProcessUnderTest.java:87)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.readNextLine(ProcessUnderTest.java:47)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:42)
-	at ✽.the next line of the output is "There is an overlapping screening"(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:26)
-
-The admin can not create screenings during a 10 minute long breaks after another screening in the same room(allows creating, deleting and listing screenings)  Time elapsed: 15.162 sec  <<< ERROR!
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:155)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.runWithTimeout(ProcessUnderTest.java:87)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.waitForOutput(ProcessUnderTest.java:42)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.promptReturned(GenericCliProcessStepDefs.java:32)
-	at ✽.the prompt containing "Ticket service>" is printed(file:///mnt/c/Users/M%C3%A1t%C3%A9/Desktop/Projektek/Java-HW/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:4)
-
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 285.07 sec

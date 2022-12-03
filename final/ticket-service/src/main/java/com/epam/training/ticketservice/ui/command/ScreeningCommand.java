@@ -32,18 +32,15 @@ public class ScreeningCommand {
     private final ScreeningService screeningService;
 
     private final UserService userService;
-    //Meg kell néznem az összes meglévő screeninget, majd
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create screening", value = "Create a new screening")
     public void createScreening(String movieTitle, String roomName, String screeningStartDate) throws ParseException {
-        if() {
-            ScreeningDto screeningDto = ScreeningDto.builder()
+        ScreeningDto screeningDto = ScreeningDto.builder()
                     .movieTitle(movieTitle)
                     .roomName(roomName)
                     .screeningStartDate(convertStringToDate(screeningStartDate))
                     .build();
             screeningService.createScreening(screeningDto);
-        }
     }
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "list screenings", value = "List the existing screenings")
