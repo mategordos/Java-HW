@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MovieCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.ui.command</a> &gt; <span class="el_source">MovieCommand.java</span></div><h1>MovieCommand.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.ui.command;
+
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
+import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
+import com.epam.training.ticketservice.core.user.UserService;
+import com.epam.training.ticketservice.core.user.model.UserDto;
+import com.epam.training.ticketservice.core.user.persistence.entity.User;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import lombok.AllArgsConstructor;
+import org.springframework.shell.Availability;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
+
+@ShellComponent
+<span class="fc" id="L20">@AllArgsConstructor</span>
+public class MovieCommand {
+
+    private final MovieService movieService;
+    private final UserService userService;
+
+
+    @ShellMethod(key = &quot;list movies&quot;, value = &quot;List the existing movies&quot;)
+    public String listMovies() {
+<span class="fc" id="L29">        List&lt;MovieDto&gt; movieList = movieService.getMovieList();</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (movieList.isEmpty()) {</span>
+<span class="fc" id="L31">            return (&quot;There are no movies at the moment&quot;);</span>
+        } else {
+<span class="fc" id="L33">            return movieList.stream()</span>
+<span class="fc" id="L34">                    .map(movie -&gt; String.format(&quot;%s (%s, %d minutes)&quot;,</span>
+<span class="fc" id="L35">                            movie.getMovieTitle(), movie.getMovieGenre(), movie.getMovieLength()))</span>
+<span class="fc" id="L36">                    .collect(Collectors.joining(&quot;\n&quot;));</span>
+        }
+    }
+
+    @ShellMethodAvailability(&quot;isAvailable&quot;)
+    @ShellMethod(key = &quot;create movie&quot;, value = &quot;Create new movie&quot;)
+    public void createMovie(String movieTitle, String movieGenre, Integer movieLength) {
+<span class="fc" id="L43">        MovieDto movieDto = MovieDto.builder()</span>
+<span class="fc" id="L44">                .movieTitle(movieTitle)</span>
+<span class="fc" id="L45">                .movieGenre(movieGenre)</span>
+<span class="fc" id="L46">                .movieLength(movieLength)</span>
+<span class="fc" id="L47">                .build();</span>
+<span class="fc" id="L48">        movieService.createMovie(movieDto);</span>
+<span class="fc" id="L49">    }</span>
+
+    @ShellMethodAvailability(&quot;isAvailable&quot;)
+    @ShellMethod(key = &quot;update movie&quot;, value = &quot;Update an existing movie&quot;)
+    public void updateMovie(String movieTitle, String movieGenre, Integer movieLength) {
+<span class="fc" id="L54">        MovieDto movieDto = MovieDto.builder()</span>
+<span class="fc" id="L55">                .movieTitle(movieTitle)</span>
+<span class="fc" id="L56">                .movieGenre(movieGenre)</span>
+<span class="fc" id="L57">                .movieLength(movieLength)</span>
+<span class="fc" id="L58">                .build();</span>
+<span class="fc" id="L59">        movieService.updateMovie(movieDto);</span>
+<span class="fc" id="L60">    }</span>
+
+
+    @ShellMethod(key = &quot;delete movie&quot;, value = &quot;Delete an existing movie&quot;)
+    public void deleteMovie(String movieTitle) {
+<span class="nc" id="L65">        movieService.deleteMovie(movieTitle);</span>
+<span class="nc" id="L66">    }</span>
+
+
+    private Availability isAvailable() {
+<span class="nc" id="L70">        Optional&lt;UserDto&gt; user = userService.describe();</span>
+<span class="nc bnc" id="L71" title="All 4 branches missed.">        return user.isPresent() &amp;&amp; user.get().getRole() == User.Role.ADMIN</span>
+<span class="nc" id="L72">                ? Availability.available()</span>
+<span class="nc" id="L73">                : Availability.unavailable(&quot;You are not an admin!&quot;);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
