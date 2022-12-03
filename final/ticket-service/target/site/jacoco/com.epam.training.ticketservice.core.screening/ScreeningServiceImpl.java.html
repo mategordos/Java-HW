@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ScreeningServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.core.screening</a> &gt; <span class="el_source">ScreeningServiceImpl.java</span></div><h1>ScreeningServiceImpl.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.core.screening;
+
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
+import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
+import com.epam.training.ticketservice.core.room.persistence.entity.Room;
+import com.epam.training.ticketservice.core.room.persistence.repository.RoomRepository;
+import com.epam.training.ticketservice.core.screening.model.ScreeningDto;
+import com.epam.training.ticketservice.core.screening.persistence.entity.Screening;
+import com.epam.training.ticketservice.core.screening.persistence.repository.ScreeningRepository;
+import lombok.AllArgsConstructor;
+import org.apache.commons.lang3.time.DateUtils;
+import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+<span class="nc" id="L21">@AllArgsConstructor</span>
+public class ScreeningServiceImpl implements ScreeningService {
+
+    private final MovieRepository movieRepository;
+    private final RoomRepository roomRepository;
+    private final ScreeningRepository screeningRepository;
+
+
+    @Override
+    public void deleteScreening(String movieTitle, String roomName, Date screeningStartDate) {
+<span class="nc" id="L31">        screeningRepository.deleteByMovie_MovieTitleLikeAndRoom_RoomNameLikeAndScreeningStartDate(</span>
+                movieTitle, roomName, screeningStartDate);
+<span class="nc" id="L33">    }</span>
+
+    @Override
+    public void createScreening(ScreeningDto screeningDto) {
+<span class="nc" id="L37">        List&lt;Screening&gt; sameRoomScreenings = screeningRepository.findByRoom_RoomName(</span>
+<span class="nc" id="L38">                screeningDto.getRoomName());</span>
+<span class="nc" id="L39">        Date newScreeningStart = screeningDto.getScreeningStartDate();</span>
+<span class="nc" id="L40">        int newScreeningLength = movieRepository.findMovieByMovieTitle(</span>
+<span class="nc" id="L41">                screeningDto.getMovieTitle()).get().getMovieLength();</span>
+
+        // Keep track of whether the new screening overlaps with an existing one or not
+<span class="nc" id="L44">        boolean overlaps = false;</span>
+
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        for (var storedScreening : sameRoomScreenings) {</span>
+<span class="nc" id="L47">            Date storedScreeningStart = storedScreening.getScreeningStartDate();</span>
+<span class="nc" id="L48">            int storedScreeningLength = storedScreening.getMovie().getMovieLength();</span>
+
+<span class="nc bnc" id="L50" title="All 2 branches missed.">            if (newScreeningStart.after(DateUtils.addMinutes(</span>
+                            storedScreeningStart, -1 * (newScreeningLength + 10)))
+<span class="nc bnc" id="L52" title="All 2 branches missed.">                    &amp;&amp; (newScreeningStart.before(DateUtils.addMinutes(</span>
+                            storedScreeningStart, storedScreeningLength))
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                    || newScreeningStart.equals(DateUtils.addMinutes(</span>
+                            storedScreeningStart, storedScreeningLength)))) {
+<span class="nc" id="L56">                System.out.println(&quot;There is an overlapping screening&quot;);</span>
+<span class="nc" id="L57">                overlaps = true;</span>
+<span class="nc" id="L58">                break;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">            } else if (newScreeningStart.after(DateUtils.addMinutes(</span>
+                            storedScreeningStart, storedScreeningLength))
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                    &amp;&amp; newScreeningStart.before(DateUtils.addMinutes(</span>
+                            storedScreeningStart, storedScreeningLength + 10))
+<span class="nc bnc" id="L63" title="All 2 branches missed.">                    || newScreeningStart.equals(DateUtils.addMinutes(</span>
+                            storedScreeningStart, storedScreeningLength + 10))) {
+<span class="nc" id="L65">                System.out.println(&quot;This would start in the break period after another screening in this room&quot;);</span>
+<span class="nc" id="L66">                overlaps = true;</span>
+<span class="nc" id="L67">                break;</span>
+            }
+<span class="nc" id="L69">        }</span>
+
+        // If the new screening does not overlap with any existing ones, create and save it
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        if (!overlaps) {</span>
+<span class="nc" id="L73">            Movie movie = movieRepository.findMovieByMovieTitle(screeningDto.getMovieTitle()).get();</span>
+<span class="nc" id="L74">            Room room = roomRepository.findRoomByRoomName(screeningDto.getRoomName()).get();</span>
+
+<span class="nc" id="L76">            Screening screening = new Screening(movie,</span>
+                    room,
+<span class="nc" id="L78">                    screeningDto.getScreeningStartDate());</span>
+<span class="nc" id="L79">            screeningRepository.save(screening);</span>
+        }
+<span class="nc" id="L81">    }</span>
+
+
+
+
+    @Override
+    public List&lt;ScreeningDto&gt; getScreeningList() {
+<span class="nc" id="L88">        return screeningRepository.findAll().stream()</span>
+<span class="nc" id="L89">                .map(this::convertEntityToDto)</span>
+<span class="nc" id="L90">                .collect(Collectors.toList());</span>
+    }
+
+    private ScreeningDto convertEntityToDto(Screening screening) {
+<span class="nc" id="L94">        return ScreeningDto.builder()</span>
+<span class="nc" id="L95">                .movieTitle(screening.getMovie().getMovieTitle())</span>
+<span class="nc" id="L96">                .roomName(screening.getRoom().getRoomName())</span>
+<span class="nc" id="L97">                .screeningStartDate(screening.getScreeningStartDate())</span>
+<span class="nc" id="L98">                .build();</span>
+    }
+
+
+
+
+
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

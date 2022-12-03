@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RoomServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.core.room</a> &gt; <span class="el_source">RoomServiceImpl.java</span></div><h1>RoomServiceImpl.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.core.room;
+
+
+import com.epam.training.ticketservice.core.room.model.RoomDto;
+import com.epam.training.ticketservice.core.room.persistence.entity.Room;
+import com.epam.training.ticketservice.core.room.persistence.repository.RoomRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+<span class="fc" id="L14">@AllArgsConstructor</span>
+public class RoomServiceImpl implements RoomService {
+
+    private final RoomRepository roomRepository;
+
+    @Override
+    public List&lt;RoomDto&gt; getRoomList() {
+
+<span class="fc" id="L22">        return roomRepository.findAll().stream()</span>
+<span class="fc" id="L23">                .map(this::convertEntityToDto)</span>
+<span class="fc" id="L24">                .collect(Collectors.toList());</span>
+    }
+
+    @Override
+    public void createRoom(RoomDto roomDto) {
+<span class="fc" id="L29">        Room room = new Room(roomDto.getRoomName(),</span>
+<span class="fc" id="L30">                roomDto.getRowLength(),</span>
+<span class="fc" id="L31">                roomDto.getColumnLength());</span>
+<span class="fc" id="L32">        roomRepository.save(room);</span>
+<span class="fc" id="L33">    }</span>
+
+    @Override
+    public void deleteRoom(String roomName) {
+<span class="fc" id="L37">        roomRepository.deleteByRoomName(roomName);</span>
+<span class="fc" id="L38">    }</span>
+
+    public void updateRoom(RoomDto roomDto) {
+<span class="fc" id="L41">        Optional&lt;Room&gt; room = roomRepository.findRoomByRoomName(roomDto.getRoomName());</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (room.isPresent()) {</span>
+<span class="fc" id="L43">            room.get().setRowLength(roomDto.getRowLength());</span>
+<span class="fc" id="L44">            room.get().setColumnLength(roomDto.getColumnLength());</span>
+<span class="fc" id="L45">            roomRepository.save(room.get());</span>
+        } else {
+<span class="fc" id="L47">            throw new IllegalArgumentException(&quot;Room does not exist!&quot;);</span>
+        }
+<span class="fc" id="L49">    }</span>
+
+    private RoomDto convertEntityToDto(Room room) {
+<span class="fc" id="L52">        return  RoomDto.builder()</span>
+<span class="fc" id="L53">                .roomName(room.getRoomName())</span>
+<span class="fc" id="L54">                .rowLength(room.getRowLength())</span>
+<span class="fc" id="L55">                .columnLength(room.getColumnLength())</span>
+<span class="fc" id="L56">                .build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

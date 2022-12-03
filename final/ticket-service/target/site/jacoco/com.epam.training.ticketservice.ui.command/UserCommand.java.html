@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.ui.command</a> &gt; <span class="el_source">UserCommand.java</span></div><h1>UserCommand.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.ui.command;
+
+import com.epam.training.ticketservice.core.user.UserService;
+import com.epam.training.ticketservice.core.user.model.UserDto;
+import java.util.Optional;
+import lombok.AllArgsConstructor;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.commands.Quit;
+
+@ShellComponent
+<span class="fc" id="L12">@AllArgsConstructor</span>
+public class UserCommand {
+
+    private final UserService userService;
+
+    @ShellMethod(key = &quot;sign out&quot;, value = &quot;Signing out&quot;)
+    public String signOut() {
+<span class="fc" id="L19">        Optional&lt;UserDto&gt; user = userService.logout();</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (user.isEmpty()) {</span>
+<span class="fc" id="L21">            return &quot;You need to login first!&quot;;</span>
+        }
+<span class="fc" id="L23">        return user.get() + &quot; is logged out!&quot;;</span>
+    }
+
+    @ShellMethod(key = &quot;sign in privileged&quot;, value = &quot;Signing in with admin&quot;)
+    public String signIn(String username, String password) {
+<span class="fc" id="L28">        Optional&lt;UserDto&gt; user = userService.login(username, password);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (user.isEmpty()) {</span>
+<span class="fc" id="L30">            return &quot;Login failed due to incorrect credentials&quot;;</span>
+        }
+<span class="fc" id="L32">        return &quot;Successful login!&quot;;</span>
+    }
+
+    @ShellMethod(key = &quot;describe account&quot;, value = &quot;Get account description&quot;)
+    public String describeAccount() {
+<span class="fc" id="L37">        Optional&lt;UserDto&gt; user = userService.describe();</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (user.isEmpty()) {</span>
+<span class="fc" id="L39">            return &quot;You are not signed in&quot;;</span>
+        }
+<span class="fc" id="L41">        return &quot;Signed in with privileged account '&quot; + user.get().getUsername() + &quot;'&quot;;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

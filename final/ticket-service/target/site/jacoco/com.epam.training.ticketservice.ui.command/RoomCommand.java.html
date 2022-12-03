@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RoomCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ticket-service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.ui.command</a> &gt; <span class="el_source">RoomCommand.java</span></div><h1>RoomCommand.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.ui.command;
+
+
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
+import com.epam.training.ticketservice.core.room.RoomService;
+import com.epam.training.ticketservice.core.room.model.RoomDto;
+import com.epam.training.ticketservice.core.room.persistence.entity.Room;
+import com.epam.training.ticketservice.core.user.UserService;
+import com.epam.training.ticketservice.core.user.model.UserDto;
+import com.epam.training.ticketservice.core.user.persistence.entity.User;
+import lombok.AllArgsConstructor;
+import org.springframework.shell.Availability;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@ShellComponent
+<span class="fc" id="L23">@AllArgsConstructor</span>
+public class RoomCommand {
+
+    private final RoomService roomService;
+    private final UserService userService;
+
+    @ShellMethod(key = &quot;list rooms&quot;, value = &quot;List the existing rooms&quot;)
+    public String listRooms() {
+<span class="fc" id="L31">        List&lt;RoomDto&gt; roomList = roomService.getRoomList();</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (roomList.isEmpty()) {</span>
+<span class="fc" id="L33">            return (&quot;There are no rooms at the moment&quot;);</span>
+        } else {
+<span class="fc" id="L35">            return roomList.stream()</span>
+<span class="fc" id="L36">                    .map(room -&gt; String.format(&quot;Room %s with %d seats, %d rows and %d columns&quot;,</span>
+<span class="fc" id="L37">                            room.getRoomName(), room.getRowLength() * room.getColumnLength(),</span>
+<span class="fc" id="L38">                            room.getRowLength(), room.getColumnLength()))</span>
+<span class="fc" id="L39">                    .collect(Collectors.joining(&quot;\n&quot;));</span>
+        }
+    }
+
+    @ShellMethodAvailability(&quot;isAvailable&quot;)
+    @ShellMethod(key = &quot;create room&quot;, value = &quot;Create new room&quot;)
+    public void createRoom(String roomName, Integer rowLength, Integer columnLength) {
+<span class="nc" id="L46">        RoomDto roomDto = RoomDto.builder()</span>
+<span class="nc" id="L47">                .roomName(roomName)</span>
+<span class="nc" id="L48">                .rowLength(rowLength)</span>
+<span class="nc" id="L49">                .columnLength(columnLength)</span>
+<span class="nc" id="L50">                .build();</span>
+<span class="nc" id="L51">        roomService.createRoom(roomDto);</span>
+<span class="nc" id="L52">    }</span>
+
+    @ShellMethodAvailability(&quot;isAvailable&quot;)
+    @ShellMethod(key = &quot;update room&quot;, value = &quot;Update an existing room&quot;)
+    public void updateRoom(String roomName, Integer rowLength, Integer columnLength) {
+<span class="nc" id="L57">        RoomDto roomDto = RoomDto.builder()</span>
+<span class="nc" id="L58">                .roomName(roomName)</span>
+<span class="nc" id="L59">                .rowLength(rowLength)</span>
+<span class="nc" id="L60">                .columnLength(columnLength)</span>
+<span class="nc" id="L61">                .build();</span>
+<span class="nc" id="L62">        roomService.updateRoom(roomDto);</span>
+<span class="nc" id="L63">    }</span>
+
+    @ShellMethodAvailability(&quot;isAvailable&quot;)
+    @ShellMethod(key = &quot;delete room&quot;, value = &quot;Delete an existing room&quot;)
+    public void deleteRoom(String roomName) {
+<span class="nc" id="L68">        roomService.deleteRoom(roomName);</span>
+<span class="nc" id="L69">    }</span>
+
+    private Availability isAvailable() {
+<span class="nc" id="L72">        return userService.isAvailable();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
